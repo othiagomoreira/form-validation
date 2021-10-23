@@ -5,13 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Form Validation</title>
 </head>
 <body>
     <div class="screen">
-        <div class="leftside"></div>
         <div class="leftside">
-            <img src="" alt="">
+            <img src="images/background.svg"Imagen ilustrativa">
+        </div>
+        <div class="rightside">
+            <h1>Crie uma conta</h1>
+
+            <form class="form validation" action="cadastro.php" method="POST">
+                <label for="name">
+                    <span>Seu nome:</span>
+                    <input type="text" name="name" id="name" data-rules="required|min=3">
+                </label>
+
+                <label for="email">
+                    <span>Seu e-mail:</span>
+                    <input type="email" name="email" id="email" data-rules="required">
+                </label>
+
+                <label for="password">
+                    <span>Sua senha:</span>
+                    <input type="password" name="password" id="password" data-rules="required|min=5">
+                </label>
+
+                <button class="btn" type="submit">Cadastrar</button>
+            </form>
+
+            <div class="login">
+                <span>Já tem uma conta?
+                    <a href="#">Faça o login</a>
+                </span>
+            </div>
         </div>
     </div>
 
